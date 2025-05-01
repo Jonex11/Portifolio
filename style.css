@@ -1,0 +1,653 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+/* estilizando a barra de navegação */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 30px 0;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+  padding: 15px 0;
+  background: blue;
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.navbar .logo a span {
+  color: blue;
+  transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span {
+  color: #fff;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: blue;
+}
+
+.navbar.sticky .menu li a:hover {
+  color: #fff;
+}
+
+/* Estilização menu btn */
+.menu-btn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+.scroll-up-btn {
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: blue;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  box-shadow: #111 0 0 5px 0;
+}
+
+.scroll-up-btn.show {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Estilização setor Inicio */
+
+.home {
+  display: flex;
+  background: url("image.png") no-repeat center;
+  height: 100vh;
+  width: 100vw;
+  color: #fff;
+  min-height: 500px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1 {
+  font-size: 27px;
+}
+
+.home .home-content .text-2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+  color: blue;
+  font-weight: 500;
+}
+.home .home-content a {
+  display: inline-block;
+  background: blue;
+  color: #fff;
+  font-size: 25px;
+  padding: 12px 36px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid blue;
+  transition: all 0.3s ease;
+}
+
+.home .home-content a:hover {
+  color: #fff;
+  background: none;
+}
+/* Estilização Seções */
+
+section {
+  padding: 100px 0;
+}
+
+.sobre,
+.serviços,
+.habilidades,
+.contato,
+footer {
+  font-family: "Poppins", sans-serif;
+}
+
+.sobre .sobre-conteudo,
+.serviços .serviços-conteudo,
+.habilidades .habilidades-conteudo,
+.contato .contato-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section .titulo {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+section .titulo::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 195px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+section .titulo::after {
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  font-size: 20px;
+  color: blue;
+  padding: 5px;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+.ponto {
+  display: flex;
+  gap: 8px;
+}
+
+.ponto::before {
+  content: "•";
+  color: blue;
+  font-size: 1.2em;
+}
+
+/* Estilização seção Sobre */
+
+.sobre .titulo::after {
+  content: "Quem Sou Eu";
+}
+
+.sobre .sobre-conteudo .esquerda {
+  width: 45%;
+}
+
+.sobre .sobre-conteudo .esquerda img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.sobre .sobre-conteudo .direita {
+  width: 55%;
+}
+.sobre .sobre-conteudo .direita .texto {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.sobre .sobre-conteudo .direita .texto span {
+  color: blue;
+}
+
+.sobre .sobre-conteudo .direita p {
+  text-align: justify;
+}
+.sobre .sobre-conteudo .direita a {
+  text-align: justify;
+  display: inline-block;
+  background: blue;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid blue;
+  transition: all 0.3s ease;
+}
+.sobre .sobre-conteudo .direita a:hover {
+  color: blue;
+  background: none;
+}
+
+/* Estilização seção serviços */
+.serviços {
+  color: #fff;
+  background: #111;
+}
+.serviços .titulo::before {
+  background: #fff;
+}
+.serviços .titulo::after {
+  content: "A Oferecer";
+  background: #111;
+}
+.serviços .serviços-conteudo .card {
+  width: (33% - 20px);
+  background: #222;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.serviços .serviços-conteudo .card:hover {
+  background: blue;
+}
+.serviços .serviços-conteudo .card .box {
+  transition: all 0.3s ease;
+}
+.serviços .serviços-conteudo .card:hover .box {
+  transform: scale(1.05);
+}
+.serviços .serviços-conteudo .card i {
+  font-size: 30px;
+  color: blue;
+  transition: color 0.3s ease;
+}
+.serviços .serviços-conteudo .card:hover i {
+  color: #fff;
+}
+.serviços .serviços-conteudo .card .texto {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+/* Estilização seção Habilidades */
+
+.habilidades .titulo::after {
+  content: "O Que Eu Sei";
+}
+
+.habilidades .habilidades-conteudo .coluna {
+  width: calc(50% - 30px);
+}
+.habilidades .habilidades-conteudo .esquerda .texto {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.habilidades .habilidades-conteudo .esquerda p {
+  text-align: justify;
+}
+.habilidades .habilidades-conteudo .esquerda a {
+  display: inline-block;
+  background: blue;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 5px 18px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid blue;
+  transition: all 0.3s ease;
+}
+.habilidades .habilidades-conteudo .esquerda a:hover {
+  color: blue;
+  background: none;
+}
+
+.habilidades .habilidades-conteudo .direita .bars {
+  margin-bottom: 15px;
+}
+
+.habilidades .habilidades-conteudo .direita .info {
+  display: flex;
+  margin-bottom: 7px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.habilidades .habilidades-conteudo .direita span {
+  font-weight: 500;
+  font-size: 18px;
+}
+.habilidades .habilidades-conteudo .direita .line {
+  height: 5px;
+  width: 100%;
+  background: lightgray;
+  position: relative;
+}
+.habilidades .habilidades-conteudo .direita .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+  background: blue;
+}
+.habilidades-conteudo .direita .html::before {
+  width: 60%;
+}
+.habilidades-conteudo .direita .css::before {
+  width: 50%;
+}
+.habilidades-conteudo .direita .js::before {
+  width: 30%;
+}
+
+/* Estilização seção Contato */
+.contato {
+  color: #fff;
+  background: #111;
+}
+.contato .titulo::before {
+  background: #fff;
+}
+.contato .titulo::after {
+  content: "Adereços";
+  background: #111;
+  padding-top: 5px;
+}
+
+.contato .contato-conteudo .coluna {
+  width: calc(50% - 30px);
+}
+.contato .contato-conteudo .texto {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.contato .contato-conteudo .esquerda p {
+  text-align: justify;
+}
+
+.contato .contato-conteudo .esquerda .icones {
+  margin: 10px 0;
+}
+
+.contato .contato-conteudo .row {
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+
+.contato .contato-conteudo .row .info {
+  margin-left: 30px;
+}
+
+.contato .contato-conteudo .row i {
+  font-size: 25px;
+  color: blue;
+}
+
+.contato .contato-conteudo .info .head {
+  font-weight: 500;
+}
+
+.contato .contato-conteudo .info .sub-titulo {
+  color: #fff;
+}
+
+.contato .direita form .fields {
+  display: flex;
+}
+.contato .direita form .field,
+.contato .direita form .fields .field {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.contato .direita form .textarea {
+  height: 80px;
+  width: 100%;
+}
+
+.contato .direita form .name {
+  margin-right: 10px;
+}
+.contato .direita form .email {
+  margin-left: 10px;
+}
+
+.contato .direita form .field input,
+.contato .direita form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: "Poppins" sans-serif;
+}
+
+.contato .direita form .textarea textarea {
+  padding-top: 10px;
+  resize: none;
+}
+
+.contato .direita form .botao {
+  height: 47px;
+  width: 170px;
+}
+.contato .direita form .botao button {
+  height: 100%;
+  width: 100%;
+  border: 2px solid blue;
+  background: blue;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contato .direita form .botao button:hover {
+  color: blue;
+  background: none;
+}
+
+/* seção Rodapé estilização */
+
+footer {
+  background: blue;
+  padding: 20px 23px;
+  color: black;
+}
+footer span {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+footer span a {
+  color: #fff;
+}
+footer span a:hover {
+  text-decoration: underline;
+}
+
+/* responsive media query start */
+@media (max-width: 1300px) {
+  .home .max-width {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 1104px) {
+  .sobre .sobre-conteudo .esquerda img {
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 947px) {
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+  .menu-btn i.active::before {
+    content: "\f00d";
+  }
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: #111;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .menu.active {
+    left: 0;
+  }
+
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+  .home .home-content .text-2 {
+    font-size: 70px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 35px;
+  }
+
+  .home .home-content a {
+    font-size: 23px;
+    padding: 10px 30px;
+  }
+  .max-width {
+    max-width: 800px;
+  }
+  .sobre .sobre-conteudo .coluna {
+    width: 100%;
+  }
+  .sobre .sobre-conteudo .esquerda {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+  .sobre .sobre-conteudo .direita {
+    flex: 100%;
+  }
+
+  .serviços .serviços-conteudo .card {
+    width: (50% - 10px);
+    margin-bottom: 20px;
+  }
+  .habilidades .habilidades-conteudo .coluna,
+  .contato .contato-conteudo .coluna {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 690px) {
+  .max-width {
+    padding: 0 23px;
+  }
+
+  .home .home-content .text-2 {
+    font-size: 60px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 32px;
+  }
+
+  .home .home-content a {
+    font-size: 20px;
+  }
+  .serviços .serviços-conteudo .card {
+    width: (50% - 10px);
+    margin-bottom: 20px;
+  }
+  .serviços .serviços-conteudo .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .home .home-content .text-2 {
+    font-size: 50px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 27px;
+  }
+}
