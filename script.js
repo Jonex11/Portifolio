@@ -26,14 +26,14 @@ $(document).ready(function () {
 // animação de escrita
 
 var Typed1 = new Typed(".typing", {
-  strings: ["Desenvolvedor Web", "Freelancer", " Desenvolvedor Front-End"],
+  strings: ["Desenvolvedor Web", "Back-End", "Front-End"],
   typeSpeed: 100,
   backSpeed: 60,
   loop: true,
 });
 
 var Typed2 = new Typed(".typing-2", {
-  strings: ["Desenvolvedor Web", "Freelancer", " Desenvolvedor Front-End"],
+  strings: ["Desenvolvedor Web", "Back-End", " Front-End"],
   typeSpeed: 100,
   backSpeed: 60,
   loop: true,
