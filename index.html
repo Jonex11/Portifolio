@@ -35,7 +35,7 @@
         <ul class="menu">
           <li><a href="#home">INICIO</a></li>
           <li><a href="#sobre">SOBRE</a></li>
-          <li><a href="#serviços">SERVIÇOS</a></li>
+          <li><a href="#serviços">PROJETOS</a></li>
           <li><a href="#habilidades">HABILIDADES</a></li>
           <li><a href="#contato">CONTATO</a></li>
         </ul>
@@ -51,8 +51,11 @@
         <div class="home-content">
           <div class="text-1">Seja Bem Vindo, meu nome é</div>
           <div class="text-2">João Victor</div>
-          <div class="text-3">E Eu Sou um <span class="typing"></span></div>
-          <a href="https://linktr.ee/joaovictorcarvallho100?utm_source=linktree_admin_share">Contratar</a>
+          <div class="text-3">Eu Sou <span class="typing"></span></div>
+          <a
+            href="https://linktr.ee/joaovictorcarvallho100?utm_source=linktree_admin_share"
+            >Contratar</a
+          >
         </div>
       </div>
     </section>
@@ -95,31 +98,54 @@
           <div class="card">
             <div class="box">
               <i class="fas fa-paint-brush"></i>
-              <div class="texto">1° Projeto: Landing Page</div>
+              <div class="texto">1° Projeto: Landing Page(Portfólio)</div>
               <p>
-                Criei uma Landing Page(Portifolio) moderna e totalmente
-                responsiva, garantindo uma experiência perfeita em desktops,
-                tablets e smartphones. Utilizando as tecnologias mais eficientes
-                do mercado Front-End:
-                <br />✅ HTML5 - Estrutura semântica e otimizada para SEO.
-                <br />✅ CSS3 - Design atraente com animações fluidas e layouts
-                flexíveis. <br />✅ JavaScript - Interatividade avançada para
-                melhor engajamento do usuário .
-              </p>
-            </div>
-          </div>
-          <!-- 
-          <div class="card">
-            <div class="box">
-              <i class="fas fa-chart-line"></i>
-              <div class="texto">Anuncio</div>
-              <p>
-                Modificar
+                Criar um portfólio moderno e totalmente responsivo para exibir
+                projetos, habilidades e contato profissional, demonstrando
+                domínio das tecnologias front-end e boas práticas de UX/UI.
+                <br />Processo Implementado: Desenvolvimento Front-End: Layout
+                responsivo (desktop, tablet e mobile) com Flexbox/Grid.
+                Animações fluidas (transições CSS e efeitos hover). Navegação
+                dinâmica com JavaScript puro. Recursos Destacados: Seção "Sobre
+                mim" com efeito de digitação (Typed.js). Barra de navegação fixa
+                e menu mobile adaptável. Formulário de contato funcional com
+                validação. Otimizações: Performance (carregamento rápido de
+                assets). Código limpo e comentado para fácil manutenção.
+                Integração com redes sociais e Linktree. <br />✅ HTML5 -
+                Estrutura semântica e otimizada para SEO. <br />✅ CSS3 - Design
+                atraente com animações fluidas e layouts flexíveis. <br />✅
+                JavaScript - Interatividade avançada para melhor engajamento do
+                usuário . <br />✅Git (Controle de versão)
               </p>
             </div>
           </div>
 
           <div class="card">
+            <div class="box">
+              <i class="fas fa-chart-line"></i>
+              <div class="texto">
+                2º Projeto: Análise de Dados com SQL e Excel(Em andamento)
+              </div>
+              <p>
+                Desenvolver um projeto pessoal para transformar dados brutos de
+                vendas em insights estratégicos, demonstrando habilidades em ETL
+                (Extract, Transform, Load) e análise de dados. <br />Processo
+                Implementado: Extração SQL: Criei consulta complexa com
+                múltiplos JOINs entre tabelas de fato e dimensões
+                (FactInternetSales, DimProduct, DimCustomer). Filtrei dados
+                específicos (vendas apenas de 2013). Calculei métricas chave
+                como receita, custo e quantidade vendida <br />• Em andamento: -
+                Transformação para Excel. Exportar os resultados para o Excel
+                via SQL Server Management Studio. Utilizar o Power Query para
+                tratamento e enriquecimento dos dados. Criar relações entre
+                tabelas para modelo de dados robusto. <br />✅Microsoft SQL
+                Server (Consulta avançada) <br />✅Microsoft Excel (Tabelas
+                Dinâmicas e Dashboard)
+              </p>
+            </div>
+          </div>
+
+          <!-- <div class="card">
             <div class="box">
               <i class="fas fa-code"></i>
               <div class="texto">App designer</div>
@@ -148,7 +174,10 @@
               <b> React.js, Vue.js e Next.js </b>, sempre com foco em design
               responsivo, acessibilidade, usabilidade e performance otimizada.
             </p>
-            <a href="https://linktr.ee/joaovictorcarvallho100?utm_source=linktree_admin_share">Leia mais</a>
+            <a
+              href="https://linktr.ee/joaovictorcarvallho100?utm_source=linktree_admin_share"
+              >Leia mais</a
+            >
           </div>
 
           <div class="coluna direita">
@@ -165,6 +194,20 @@
                 <span>50%</span>
               </div>
               <div class="line css"></div>
+            </div>
+            <div class="bars">
+              <div class="info">
+                <span>SQL</span>
+                <span>45%</span>
+              </div>
+              <div class="line sql"></div>
+            </div>
+            <div class="bars">
+              <div class="info">
+                <span>EXCEL</span>
+                <span>60%</span>
+              </div>
+              <div class="line ex"></div>
             </div>
             <div class="bars">
               <div class="info">
@@ -220,7 +263,12 @@
             <form action="#">
               <div class="fields">
                 <div class="field name">
-                  <input type="text" placeholder="Nome" required />
+                  <input
+                    type="text"
+                    pattern="[a-zA-Z]+"
+                    placeholder="Nome"
+                    required
+                  />
                 </div>
                 <div class="field email">
                   <input type="email" placeholder="E-mail" required />
