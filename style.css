@@ -98,7 +98,7 @@ html {
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
-  box-shadow: #111 0 0 5px 0;
+  box-shadow: #1a1a1a 0 0 5px 0;
 }
 
 .scroll-up-btn.show {
@@ -199,7 +199,7 @@ section .titulo::before {
   left: 50%;
   width: 195px;
   height: 3px;
-  background: #111;
+  background: #1a1a1a;
   transform: translateX(-50%);
 }
 section .titulo::after {
@@ -278,14 +278,14 @@ section .titulo::after {
 /* Estilização seção serviços */
 .serviços {
   color: #fff;
-  background: #111;
+  background: #1a1a1a;
 }
 .serviços .titulo::before {
   background: #fff;
 }
 .serviços .titulo::after {
   content: "A Oferecer";
-  background: #111;
+  background: #1a1a1a;
 }
 .serviços .serviços-conteudo .card {
   width: (33% - 20px);
@@ -387,6 +387,12 @@ section .titulo::after {
 .habilidades-conteudo .direita .html::before {
   width: 60%;
 }
+.habilidades-conteudo .direita .sql::before {
+  width: 45%;
+}
+.habilidades-conteudo .direita .ex::before {
+  width: 60%;
+}
 .habilidades-conteudo .direita .css::before {
   width: 50%;
 }
@@ -397,14 +403,14 @@ section .titulo::after {
 /* Estilização seção Contato */
 .contato {
   color: #fff;
-  background: #111;
+  background: #1a1a1a;
 }
 .contato .titulo::before {
   background: #fff;
 }
 .contato .titulo::after {
   content: "Adereços";
-  background: #111;
+  background: #1a1a1a;
   padding-top: 5px;
 }
 
@@ -561,7 +567,7 @@ footer span a:hover {
     width: 100%;
     left: -100%;
     top: 0;
-    background: #111;
+    background: #1a1a1a;
     text-align: center;
     padding-top: 80px;
     transition: all 0.3s ease;
